@@ -1,0 +1,114 @@
+/* variables */
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    /*  (paragraphs) */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    /*  (background, headings, buttons) */
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+/* General CSSs */
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    font-family: "Big Shoulders Display";
+    font-weight: 700;
+}
+p{
+    color: var(--transparent-white);
+    font-family: "Lexend Deca";
+    font-weight: 400;
+}
+.car{
+    padding: 40px 35px 40px 35px;
+}
+.car-icon{
+    display: block;
+}
+.car-heading{
+    padding: 30px 0 35px 0;
+}
+.car-intro{
+    padding-bottom: 70px;
+}
+button{
+    border: none;
+    background-color: var(--very-light-gray);
+    padding: 12px 22px 12px 22px;
+    border-radius: 80px;
+    box-sizing: border-box;
+    border: 3px solid var(--very-light-gray);
+}
+button:hover{
+    cursor: pointer;
+}
+/*  */
+.card-container{
+    display: flex;
+    margin: auto;
+    width: 43.75rem;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.car-list{
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.sedan{
+    background-color: var(--bright-orange);
+}
+.sedan button{
+    color: var(--bright-orange);
+}
+button.sedan-button:hover{
+    color: var(--very-light-gray);
+    background-color: var(--bright-orange);
+}
+
+.suv{
+    background-color: var(--dark-cyan);
+}
+.suv button {
+    color: var(--dark-cyan);
+}
+button.suv-button:hover{
+    color: var(--very-light-gray);
+    background-color: var(--dark-cyan);
+}
+
+.luxury{
+    background-color: var(--very-dark-cyan);
+}
+.luxury button {
+    color: var(--very-dark-cyan);
+}
+button.luxury-button:hover{
+    background-color: var(--very-dark-cyan);
+    color: var(--very-light-gray);
+}
+
+@media all and (min-width: 46.26rem){
+    body{
+        height: 98vh;
+    }
+}
+
+@media all and (max-width: 46.25rem) {
+    .card-container{
+        margin: 5rem auto;
+        width: 90%;
+        height: 100%;
+    }
+    .car-list{
+        display: flex;
+        flex-direction: column;
+    }
+}
